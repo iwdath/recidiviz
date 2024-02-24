@@ -26,6 +26,7 @@
   }
 
   &__link {
+    font-weight: 400;
     font-size: var(--main-size);
     color: var(--light-color);
     transition: color 0.3s ease-in-out;
@@ -42,10 +43,10 @@
     &:active {
       color: var(--active-color);
     }
-  }
-}
 
-.nav__link.focus-visible {
-  outline: 1px solid var(--active-color);
-  outline-offset: 3px;
+    &.focus-visible {
+      outline: 1px solid var(--active-color);
+      outline-offset: 3px;
+    }
+  }
 }
