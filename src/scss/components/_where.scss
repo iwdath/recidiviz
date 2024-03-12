@@ -35,5 +35,9 @@
     font-size: 14px;
     letter-spacing: 0;
     background: #00665f;
+
+    &.focus-visible {
+      border: 1px solid var(--active-color);
+    }
   }
 }
