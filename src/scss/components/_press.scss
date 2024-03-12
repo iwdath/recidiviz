@@ -8,6 +8,11 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 33px;
+
+    @include small-mobile {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -18,10 +23,19 @@
     line-height: 38px;
     letter-spacing: 0.04em;
     color: var(--dark-color);
+
+    @include small-tablet {
+      font-size: 24px;
+    }
+
+    @include small-mobile {
+      margin-bottom: 16px;
+    }
   }
 
   &__link {
     border: 1px solid rgba(var(--text-color), 0.2);
+    min-width: 112px;
     color: #00413e;
   }
 
@@ -31,6 +45,18 @@
 
   &__item {
     grid-column: 4 span;
+
+    @include small-tablet {
+      grid-column: 2 span;
+    }
+
+    @include small-mobile {
+      grid-column: 4 span;
+    }
+  }
+
+  @include mobile {
+    padding: 60px 0;
   }
 }
 

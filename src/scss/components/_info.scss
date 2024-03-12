@@ -13,6 +13,18 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include tablet {
+      width: 190px;
+    }
+
+    @include small-tablet {
+      width: 125px;
+    }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &::after {
@@ -24,6 +36,18 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include tablet {
+      width: 190px;
+    }
+
+    @include small-tablet {
+      width: 125px;
+    }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__content {
@@ -36,6 +60,14 @@
     border-left: 1px solid var(--dark-color);
     padding: 0 82px;
     height: 100%;
+
+    @include small-tablet {
+      padding: var(--offset);
+    }
+
+    @include mobile {
+      border: none;
+    }
   }
 
   &__text {
@@ -57,5 +89,17 @@
     font-size: 15px;
     line-height: 24px;
     color: var(--light-color);
+  }
+
+  @include tablet {
+    height: 530px;
+  }
+
+  @include small-tablet {
+    height: 450px;
+  }
+
+  @include mobile {
+    height: auto;
   }
 }

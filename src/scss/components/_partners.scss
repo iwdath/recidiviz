@@ -5,12 +5,26 @@
   &__container {
     align-items: center;
     gap: 6px;
+
+    @include big-desktop {
+      justify-content: space-between;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   &__list {
     display: flex;
     align-items: center;
     gap: 12px;
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__title {
@@ -31,6 +45,12 @@
     &.focus-visible {
       outline: 1px solid var(--active-color);
       outline-offset: 3px;
+    }
+  }
+
+  &__logo {
+    @include big-desktop {
+      max-width: 130px;
     }
   }
 

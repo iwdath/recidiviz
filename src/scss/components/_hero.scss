@@ -13,8 +13,21 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  &__container {
+    margin-bottom: 60px;
+  }
+
   &__content {
     grid-column: 6 span;
+
+    @include small-tablet {
+      grid-column: 3 span;
+    }
+
+    @include small-mobile {
+      grid-column: 4 span;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -25,6 +38,11 @@
     font-size: 38px;
     line-height: 44px;
     letter-spacing: 1.2px;
+
+    @include tablet {
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
 
   &__descr {
@@ -45,10 +63,34 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
+
+    @include small-mobile {
+      margin-bottom: var(--offset);
+    }
+  }
+
+  &__list {
+    @include small-tablet {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: var(--offset);
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include small-mobile {
+      grid-template-columns: 1fr;
+      row-gap: 16px;
+    }
   }
 
   &__item {
     grid-column: 2 span;
+
+    @include small-tablet {
+      grid-column: 1 span;
+    }
   }
 
   &__link {
@@ -79,5 +121,9 @@
     &.focus-visible {
       border-color: var(--active-color);
     }
+  }
+
+  @include mobile {
+    padding-top: 120px;
   }
 }

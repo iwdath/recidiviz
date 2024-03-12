@@ -4,12 +4,38 @@
   color: #fafafa;
   background-color: #001f1f;
 
+  &__container {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
   &__content {
     grid-column: 4 span;
+
+    @include small-tablet {
+      grid-column: 2 span;
+    }
+
+    @include mobile {
+      margin-bottom: var(--offset);
+      max-width: 350px;
+      text-align: center;
+    }
   }
 
   &__map {
     grid-column: 7 / 5 span;
+
+    @include small-tablet {
+      grid-column: 3 / 4 span;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -20,6 +46,12 @@
     font-size: 36px;
     line-height: 52px;
     letter-spacing: 0.03em;
+
+    @include small-tablet {
+      margin-bottom: var(--offset);
+      font-size: 28px;
+      line-height: 30px;
+    }
   }
 
   &__descr {
@@ -39,5 +71,9 @@
     &.focus-visible {
       border: 1px solid var(--active-color);
     }
+  }
+
+  @include mobile {
+    padding: 60px 0;
   }
 }
