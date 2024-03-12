@@ -13,7 +13,7 @@
   letter-spacing: 0.02px;
   text-align: center;
   color: var(--light-color);
-  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
   &:focus {
     outline: none;
@@ -21,12 +21,14 @@
 
   @include hover {
     border-color: var(--accent-color);
+    color: var(--light-color);
     background-color: var(--accent-color);
   }
 
   /* stylelint-disable-next-line order/order */
   &:active {
     border-color: var(--active-color);
+    color: var(--light-color);
     background-color: var(--active-color);
   }
 

@@ -1,5 +1,5 @@
+/* stylelint-disable color-function-notation */
 .information {
-  position: relative;
   padding-bottom: 140px;
   background-color: #f4f5f5;
 
@@ -44,6 +44,6 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
-    color: var(--text-color);
+    color: rgba(var(--text-color), 0.8);
   }
 }

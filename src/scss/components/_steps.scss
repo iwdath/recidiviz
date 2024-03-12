@@ -1,4 +1,3 @@
-/* stylelint-disable alpha-value-notation */
 /* stylelint-disable color-function-notation */
 .steps {
   padding: 120px 0;
@@ -14,7 +13,7 @@
     line-height: 38px;
     letter-spacing: 1.2px;
     text-align: center;
-    color: #var(--dark-color);
+    color: var(--dark-color);
   }
 
   &__list {
@@ -63,7 +62,7 @@
         margin-top: -35px;
         width: 100%;
         height: 1px;
-        background: rgba(53, 83, 98, 0.2);
+        background: rgba(var(--text-color), 0.2);
         transform: translateY(-50%);
       }
     }
@@ -76,6 +75,6 @@
     font-size: 15px;
     line-height: 24px;
     text-align: center;
-    color: var(--text-color);
+    color: rgba(var(--text-color), 0.8);
   }
 }

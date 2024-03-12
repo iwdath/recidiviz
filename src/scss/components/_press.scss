@@ -1,0 +1,133 @@
+/* stylelint-disable color-function-notation */
+.press {
+  padding: 80px 0 130px;
+  background-color: var(--light-color);
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 33px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 38px;
+    letter-spacing: 0.04em;
+    color: var(--dark-color);
+  }
+
+  &__link {
+    border: 1px solid rgba(var(--text-color), 0.2);
+    color: #00413e;
+  }
+
+  &__list {
+    row-gap: 50px;
+  }
+
+  &__item {
+    grid-column: 4 span;
+  }
+}
+
+.press-card {
+  position: relative;
+  border-top: 1px solid rgba(var(--text-color), 0.3);
+  padding-top: 16px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 16px;
+  }
+
+  &__author {
+    padding: 4px 0 4px 40px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(var(--text-color), 0.6);
+    background-position: left top;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+
+    &--ted {
+      background-image: url("../img/approach-icon-1.png");
+    }
+
+    &--corr {
+      background-image: url("../img/press-1.png");
+    }
+
+    &--justice {
+      background-image: url("../img/press-2.png");
+    }
+
+    &--nyt {
+      background-image: url("../img/approach-icon-2.png");
+    }
+
+    &--corr1 {
+      background-image: url("../img/press-3.png");
+    }
+
+    &--crime {
+      background-image: url("../img/press-4.png");
+    }
+  }
+
+  &__date {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(var(--text-color), 0.6);
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 25px;
+    color: #00413e;
+  }
+
+  &__link {
+    color: inherit;
+    transition: color 0.3s ease-in-out;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @include hover {
+      color: var(--accent-color);
+    }
+
+    /* stylelint-disable-next-line order/order */
+    &:active {
+      color: var(--active-color);
+    }
+
+    &.focus-visible {
+      &::after {
+        outline: 1px solid var(--active-color);
+        outline-offset: 3px;
+      }
+    }
+  }
+}
