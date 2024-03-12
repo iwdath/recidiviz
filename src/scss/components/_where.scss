@@ -1,0 +1,39 @@
+.where {
+  padding-top: 155px;
+  padding-bottom: 133px;
+  color: #fafafa;
+  background-color: #001f1f;
+
+  &__content {
+    grid-column: 4 span;
+  }
+
+  &__map {
+    grid-column: 7 / 5 span;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 43px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 52px;
+    letter-spacing: 0.03em;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 37px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  &__btn {
+    border: none;
+    font-size: 14px;
+    letter-spacing: 0;
+    background: #00665f;
+  }
+}
